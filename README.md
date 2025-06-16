@@ -29,9 +29,9 @@ import numpy
 If the module's name is different from the install name, you should set it : 
 ```python
 import modules_for_freethreading
-modules_for_freethreading.add_module("pytorch")
-modules_for_freethreading.add_other_name("pytorch", "torch")
-import pytorch
+modules_for_freethreading.add_module("jpype")
+modules_for_freethreading.add_other_name("jpype", "jpype1")
+import jpype
 ```
 
 ## License
