@@ -3,12 +3,12 @@
 ## Description
 
 See [https://github.com/python/cpython/pull/135550](https://github.com/python/cpython/pull/135550).
-Now the free-threading is not a experimental feature anymore. However, the `.pyd` files are different between two executions.
-This repository is make sure that if the `.pyd` files are not the files for the execution environment, it will be reinstall for the currently version.
+Now the free-threading is not a experimental feature anymore. However, the `.pyd` files are different between two executable.
+This repository is make sure that if the `.pyd` files are not the files for the executable version, it will be reinstall for the currently version.
 
 ## Note
 
-Make sure that the packages have the version that is compatible with the python execution environment.
+Make sure that the packages have the version that is compatible with the current python executable version.
 The `cp313-cp313` should be used for the normal, while the `cp313-cp313t` should be used for the free-threading.
 
 ## Usage
@@ -17,7 +17,7 @@ The `cp313-cp313` should be used for the normal, while the `cp313-cp313t` should
 pip install modules_for_freethreading
 ```
 
-The code below is an example of using the `numpy` module. If the `numpy` module is not compatible with the current python execution environment, it will be reinstalled for the currently version.
+The code below is an example of using the `numpy` module. If the `numpy` module is not compatible with the current python executable version, it will be reinstalled for the corrently version.
 ```python
 import modules_for_freethreading
 modules_for_freethreading.add_module("numpy")
