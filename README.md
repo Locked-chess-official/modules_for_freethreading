@@ -24,6 +24,16 @@ modules_for_freethreading.add_module("numpy"[, module_version="2.2.0"])
 import numpy
 ```
 
+## Note
+
+If the module's name is different from the install name, you should set it : 
+```python
+import modules_for_freethreading
+modules_for_freethreading,add_module("pytorch")
+modules_for_freethreading.add_other_name("pytorch", "torch")
+import torch
+```
+
 ## License
 
 MIT
