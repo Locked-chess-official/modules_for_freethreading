@@ -6,6 +6,7 @@ import sys
 import threading
 import subprocess
 import time
+import builtins
 
 def is_valid_version(version_str: str|None):
     if version_str is None:
@@ -81,4 +82,4 @@ def _register_import(name, globals=None, locals=None, fromlist=(), level=0):
         return _original_import(name, globals, locals, fromlist, level)
     
     
-__import__ = _register_import
+builtins.__import__ = _register_import
