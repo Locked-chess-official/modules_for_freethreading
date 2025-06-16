@@ -65,7 +65,7 @@ def _register_import(name, globals=None, locals=None, fromlist=(), level=0):
         version_str = f"=={_register_module.get(name, '')}"
     else:
         version_str = ''
-    if get_version(name) != _register_module[name]:
+    if _register_module[name] and get_version(name) != _register_module[name]:
         need_pip = True
     else:
         try:
