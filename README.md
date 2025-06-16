@@ -1,4 +1,4 @@
-# Modules for freethreading built python
+# Modules for free-threading built python
 
 ## Description
 
