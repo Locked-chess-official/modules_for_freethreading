@@ -20,7 +20,7 @@ pip install modules_for_freethreading
 The code below is an example of using the `numpy` module. If the `numpy` module is not compatible with the current python executable version, it will be reinstalled for the corrently version.
 ```python
 import modules_for_freethreading
-modules_for_freethreading.add_module("numpy")
+modules_for_freethreading.add_module("numpy"[, module_version="2.2.0"])
 ```
 
 ## License
