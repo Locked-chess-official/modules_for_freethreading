@@ -21,6 +21,7 @@ The code below is an example of using the `numpy` module. If the `numpy` module 
 ```python
 import modules_for_freethreading
 modules_for_freethreading.add_module("numpy"[, module_version="2.2.0"])
+import numpy
 ```
 
 ## License
