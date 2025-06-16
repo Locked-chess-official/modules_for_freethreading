@@ -3,7 +3,7 @@
 ## Description
 
 See [https://github.com/python/cpython/pull/135550](https://github.com/python/cpython/pull/135550).
-Now the free-threading is not a experimental feature anymore. However, the `.pyd` files are not included in the official release.
+Now the free-threading is not a experimental feature anymore. However, the `.pyd` files are different between two executions.
 This repository is make sure that if the `.pyd` files are not the files for the execution environment, it will be reinstall for the currently version.
 
 ## Note
