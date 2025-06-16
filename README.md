@@ -8,7 +8,7 @@ This repository is make sure that if the `.pyd` files are not the files for the 
 
 ## Note
 
-Make sure that the packages have the version that is compatible with the current python executable version.
+Make sure that the packages have at least a version that is compatible with the current python executable version.
 The `cp313-cp313` should be used for the normal, while the `cp313-cp313t` should be used for the free-threading.
 
 ## Usage
