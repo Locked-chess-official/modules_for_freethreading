@@ -26,6 +26,7 @@ def get_version(name):
 _original_import = __import__
 
 _register_module: dict[str, str] = {}
+_other_name: dict[str, str] = {}
 def add_module(module_name: str, module_version: str|None = None):
     if not is_valid_version(module_version):
         raise ValueError(f'''Wrong version {module_version}: version must be the official version.
@@ -33,6 +34,12 @@ For example: 2.2.0, 2.2.1, etc.
 Don't set the version like 2.2.0rc1, 2.2.0dev0, 2.2.0beta, etc.''')
 
     _register_module[module_name] = module_version if module_version is not None else ""
+
+def add_other_name(module_name: str, module_other_name: str):
+    """
+    For the module that name in pypi is different from the real name.
+    """
+    _other_name[module_name] = module_other_name
 
 def _register_import(name, globals=None, locals=None, fromlist=(), level=0):
     def wait_print():
@@ -52,7 +59,7 @@ def _register_import(name, globals=None, locals=None, fromlist=(), level=0):
             "pip",
             "install",
             "--force-reinstall",
-            f"{name}{version_str}"
+            f"{_other_name.get(name, name)}{version_str}"
         ], stderr=subprocess.PIPE, stdout=subprocess.PIPE, text=True)
         stdout, stderr = setup_module.communicate()
         finish = True
