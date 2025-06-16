@@ -2,7 +2,7 @@
 
 ## Description
 
-See [https://github.com/python/cpython/pull/135550](https://github.com/python/cpython/pull/135550).
+See [https://github.com/python/cpython/pull/135550](https://github.com/python/cpython/pull/135550), [PEP779](https://peps.python.org/pep-0779/#open-issues).
 Now the free-threading is not a experimental feature anymore. However, the `.pyd` files are different between two executable.
 This repository is make sure that if the `.pyd` files are not the files for the executable version, it will be reinstall for the currently version.
 
