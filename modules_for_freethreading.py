@@ -1,4 +1,4 @@
-__all__ = ("add_module",)
+__all__ = ("add_module", "add_other_name")
 
 from packaging.version import parse
 from importlib.metadata import version
